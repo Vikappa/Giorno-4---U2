@@ -1,6 +1,60 @@
-.postIt {}
+body {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-#p1 {
-    background: linear-gradient(to bottom, #FEFECC 0%, #FEFECC 75%, #BDBDA3 75%, #BDBDA3 100%);
+.postIt {
+    position: relative;
+    height: 220px;
+    width: 250px;
+    margin: 30px;
+    padding: 20px;
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
 
+.postIt:hover {
+    z-index: 1;
+    transform: scale(150%);
+}
+
+.postIt p {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.postIt textArea {
+    border: 0;
+    font-family: 'Indie Flower', cursive;
+    background-color: transparent;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.yellow {
+    background: rgb(252, 252, 202);
+    background: linear-gradient(180deg, rgba(252, 252, 202, 1) 0%, rgba(233, 234, 179, 1) 71%, rgba(189, 189, 163, 1) 100%);
+    transform: rotate(-6deg);
+}
+
+.green {
+    background: rgb(202, 252, 203);
+    background: linear-gradient(180deg, rgba(202, 252, 203, 1) 0%, rgba(186, 224, 187, 1) 71%, rgba(158, 181, 161, 1) 100%);
+    transform: rotate(4deg);
+
+}
+
+.liliac {
+    background: rgb(202, 202, 250);
+    background: linear-gradient(180deg, rgba(202, 202, 250, 1) 0%, rgba(179, 178, 206, 1) 71%, rgba(139, 140, 155, 1) 100%);
+    transform: rotate(-10deg);
 }
