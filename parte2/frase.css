@@ -8,3 +8,90 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+* {
+    font-family: 'Bree Serif', serif;
+}
+
+#testoAlternato {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    line-height: 2em;
+    border: 3px solid gray;
+    font-size: 2em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    animation: rotazione 3s linear infinite;
+}
+
+.parole {
+    color: hsl(204, 20%, 51%);
+    visibility: hidden;
+    position: relative;
+    white-space: nowrap;
+
+}
+
+.parole i {
+    left: 0.3em;
+    position: absolute;
+}
+
+
+.parole i:nth-child(1) {
+    animation: fadeFromAbove 3s linear infinite;
+}
+
+.parole i:nth-child(2) {
+    animation: fadeFromAbove 3s linear infinite;
+    animation-delay: 1s;
+}
+
+.parole i:nth-child(3) {
+    animation: fadeFromAbove 3s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes fadeFromAbove {
+
+    0% {
+        visibility: visible;
+        transform: translate(0, -3em);
+        opacity: 0;
+    }
+
+    3% {
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+
+    6.1% {
+        transform: translate(0, 0em);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    28.3% {
+        transform: translate(0, 0em);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    30.3% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    33.3% {
+        transform: translate(0, 3em);
+    }
+
+    33.4% {
+        visibility: hidden;
+
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
